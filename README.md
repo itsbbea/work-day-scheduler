@@ -1,1 +1,5 @@
-# work-day-scheduler
+## Work Day Scheduler
+
+## Description
+
+A simple weekly calendar 
