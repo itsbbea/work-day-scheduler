@@ -3,13 +3,17 @@
 // in the html.
 
 $(function () {
-    var today = dayjs();
-    $('#currentDay').text(today.format("dddd, MMMM D, YYYY"));
-       // Get the current hour using dayjs
-var currentHour = dayjs().hour();
+  var today = dayjs();
+  $('#currentDay').text(today.format("dddd, MMMM D, YYYY"));
+  
+  // Gets the current hour using dayjs
+  var currentHour = dayjs().hour();
 
+  // Selects all elements with the class 'saveBtn'
+  var saveBtnEl = $('.saveBtn');
 
-
+ 
+});
 
 
     // TODO: Add a listener for click events on the save button. This code should
@@ -30,6 +34,4 @@ var currentHour = dayjs().hour();
     // attribute of each time-block be used to do this?
     //
     // TODO: Add code to display the current date in the header of the page.
-  });
-  
   
