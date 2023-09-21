@@ -23,8 +23,6 @@ $(function () {
 
     textarea.val(userInput);
 
-    // console.log($(timeBlockPast[i]))
-    // console.log($(timeBlockPast [i]).attr("id").split("hour-")[1]);
     var blockHour = parseInt($(timeBlockPast[i]).attr("id").split("hour-")[1])
 
     if(blockHour < currentHour){
@@ -41,9 +39,6 @@ $(function () {
     //$(timeBlockPast[i]).addClass("present")
   }
 
-    // TODO: Add code to apply the past, present, or future class to each time
-    // block by comparing the id to the current hour.
- 
 });
 
 
