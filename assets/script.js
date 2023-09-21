@@ -8,10 +8,33 @@ $(function () {
   
   // Gets the current hour using dayjs
   var currentHour = dayjs().hour();
-
+  console.log(currentHour)
   // Selects all elements with the class 'saveBtn'
   var saveBtnEl = $('.saveBtn');
+  var timeBlockPast = $(".time-block");
+  // console.log(timeBlockPast)
+  for (var i = 0; i < timeBlockPast.length; i++) {
 
+    console.log($(timeBlockPast[i]))
+    console.log($(timeBlockPast [i]).attr("id").split("hour-")[1]);
+    var blockHour = parseInt($(timeBlockPast[i]).attr("id").split("hour-")[1])
+
+    if(blockHour < currentHour){
+      //PAST
+      $(timeBlockPast[i]).addClass("past")
+    }
+    if(blockHour === currentHour){
+      $(timeBlockPast[i]).addClass("present")
+    }
+    if(blockHour > currentHour){
+  $(timeBlockPast[i]).addClass("future")
+
+    }
+    //$(timeBlockPast[i]).addClass("present")
+  }
+
+    // TODO: Add code to apply the past, present, or future class to each time
+    // block by comparing the id to the current hour.
  
 });
 
