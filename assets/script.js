@@ -15,6 +15,14 @@ $(function () {
   // console.log(timeBlockPast)
   for (var i = 0; i < timeBlockPast.length; i++) {
 
+    var block = $(timeBlockPast[i]);
+    var blockId = block.attr("id");
+    var textarea = block.find("textarea")
+
+    var userInput = localStorage.getItem(blockId);
+
+    textarea.val(userInput);
+
     // console.log($(timeBlockPast[i]))
     // console.log($(timeBlockPast [i]).attr("id").split("hour-")[1]);
     var blockHour = parseInt($(timeBlockPast[i]).attr("id").split("hour-")[1])
