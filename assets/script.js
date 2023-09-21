@@ -15,8 +15,8 @@ $(function () {
   // console.log(timeBlockPast)
   for (var i = 0; i < timeBlockPast.length; i++) {
 
-    console.log($(timeBlockPast[i]))
-    console.log($(timeBlockPast [i]).attr("id").split("hour-")[1]);
+    // console.log($(timeBlockPast[i]))
+    // console.log($(timeBlockPast [i]).attr("id").split("hour-")[1]);
     var blockHour = parseInt($(timeBlockPast[i]).attr("id").split("hour-")[1])
 
     if(blockHour < currentHour){
